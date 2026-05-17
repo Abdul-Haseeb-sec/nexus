@@ -1,0 +1,103 @@
+/* Responsive Layout Classes for NEXUS OS */
+
+.nexus-dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  padding: 32px;
+  gap: 32px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nexus-sidebar {
+  width: 90px;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+}
+
+.nexus-sidebar.expanded {
+  width: 280px;
+}
+
+.nexus-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexus-main-content.sidebar-open {
+  transform: scale(0.98);
+}
+
+/* Bottom Navigation (Hidden on Desktop) */
+.nexus-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nexus-bottom-nav-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.nexus-bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #71717A;
+  background: transparent;
+  border: none;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nexus-bottom-nav-item.active {
+  color: #3B82F6;
+}
+
+/* Mobile Media Queries */
+@media (max-width: 768px) {
+  .nexus-dashboard-layout {
+    flex-direction: column;
+    padding: 16px;
+    padding-bottom: 100px; /* Space for Bottom Nav */
+    gap: 16px;
+    overflow-y: auto;
+  }
+
+  .nexus-sidebar {
+    display: none !important; /* Hide Sidebar on mobile */
+  }
+
+  .nexus-main-content {
+    flex: none;
+    transform: none !important;
+  }
+
+  .nexus-bottom-nav {
+    display: block; /* Show Bottom Nav on mobile */
+  }
+}

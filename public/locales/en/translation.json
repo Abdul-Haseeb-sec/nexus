@@ -1,0 +1,14 @@
+{
+  "welcome": "Welcome to Nexus",
+  "login": "Login",
+  "signup": "Sign Up",
+  "email": "Email",
+  "username": "Username",
+  "password": "Password",
+  "send_verification": "Send Verification",
+  "enter_nexus": "Enter Nexus",
+  "verify_email": "Verify Email",
+  "code_sent": "Code sent to {{email}}",
+  "demo_code": "Demo Code: {{code}}",
+  "back": "← Back"
+}
