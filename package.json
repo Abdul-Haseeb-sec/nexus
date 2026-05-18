@@ -18,7 +18,9 @@
   },
   "devDependencies": {
     "vite": "^5.2.0",
-    "@vitejs/plugin-react": "^4.2.1"
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1"
   },
   "scripts": {
     "dev": "vite",
@@ -27,7 +29,8 @@
     "preview": "vite preview",
     "lint": "npx eslint --ext .js,.jsx src",
     "lint:fix": "npx eslint --fix --ext .js,.jsx src",
-    "format": "npx prettier --write \"src/**/*.{js,jsx,css,json,md}\""
+    "format": "npx prettier --write \"src/**/*.{js,jsx,css,json,md}\"",
+    "test": "echo \"No tests configured\""
   },
   "browserslist": {
     "production": [
